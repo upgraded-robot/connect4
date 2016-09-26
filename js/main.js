@@ -1,41 +1,38 @@
 
 $( document ).ready(function() {
-
-  $('.col').on('click', function(){
+ /* $('.col').on('click', function(){
   	$("this div:nth-child(6)").addClass("red");
   	console.log(this);
-  });
-
+  });*/
   function Game (){
-    $('.col').on('click', function() {
+    /*$('.col').on('click', function() {
       $(this).children('.empty').last().removeClass('empty').addClass('red');
     });
-
     var currentPlayer = 'player1';
-    function tooglePlayer (){}
-
+    function tooglePlayer (){}*/
   }
 
   Game.prototype.turn = function(){
   	var currentPlayer = player1;
-  	$("#pressme").on('click', function(){
-  		if (currentPlayer === player1){
-  			currentPlayer = player2;
-  			console.log(player2.color);
-  		} else {
-  			currentPlayer = player1;
-  			console.log(player1.color);
-  		}
-  	});
+    console.log("hey");
+    $('.col').on('click', function() {
+      if (currentPlayer === player1){
+        $(this).children('.empty').last().removeClass('empty').addClass('red');
+        currentPlayer = player2;
+      } else {
+        $(this).children('.empty').last().removeClass('empty').addClass('black');
+        currentPlayer = player1;
+      }
+    });
   }
 
   function Player (color){
   	this.color= color;
   }
 
-  var player1 = new Player("red");
-  var player2 = new Player("black");
+   player1 = new Player("red");
+   player2 = new Player("black");
 
-  var game = new Game();
+   game = new Game();
 
  });
