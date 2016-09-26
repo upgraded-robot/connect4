@@ -1,10 +1,23 @@
 
+ 
 $('.col').on('click', function(){
 	$("this div:nth-child(6)").addClass("red");
 	console.log(this);
 });
 
 function Game (){
+
+  $('.col').on('click', function() {
+    $(this).children('.empty').last().removeClass('empty').addClass('red');
+  });
+
+  var currentPlayer = 'player1';
+
+  function tooglePlayer (){
+
+  }
+
+
 
 }
 
