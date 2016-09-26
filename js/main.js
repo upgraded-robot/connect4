@@ -1,5 +1,6 @@
+
 $('.col').on('click', function(){
-	$("this div:nth-child(6)").addClass("red"); 
+	$("this div:nth-child(6)").addClass("red");
 	console.log(this);
 });
 
@@ -28,4 +29,3 @@ var player1 = new Player("red");
 var player2 = new Player("black");
 
 var game = new Game();
-
